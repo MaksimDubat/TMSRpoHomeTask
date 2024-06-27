@@ -4,7 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Home task!")
+            Console.WriteLine("amount of numbers");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            List<int> list = new List<int>(amount);
+            Console.WriteLine("put the nambers");
+            for (int i = 0; i < amount; i++)
+            {
+                int number = Convert.ToInt32(Console.ReadLine());
+                list.Add(number);
+            }
+            int sum = 0;
+            Console.WriteLine("input divider");
+            int divider = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] % divider == 0)
+                    sum += list[i];
+            }
+            Console.WriteLine("Summ is: " + sum);
         }
     }
 }
